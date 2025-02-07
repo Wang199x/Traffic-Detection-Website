@@ -4,6 +4,8 @@ Here are some instructions and relevant links for my project.
 ## Relevant link:
 ### Dataset (use only "leftImg8bit" and "gtFine"): https://www.cityscapes-dataset.com/
 ### Models: https://github.com/Wang199x/Traffic-Detection-Website/releases
+### Demo image:
+![Testing images after being tested with testing_image.py](Test_Image.png)
 ## Training and testing phases step by step:
 ### create_mask.py: create object masks for traffic images.
 ### annotation.py: create YOLO annotation based on masks from create_mask.py.
