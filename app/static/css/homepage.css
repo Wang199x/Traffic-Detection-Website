@@ -1,0 +1,52 @@
+/* Homepage-specific styles */
+#about_us {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+#about_us h2 {
+  margin: 0;
+  text-align: left;
+}
+
+#about_us .content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.about-us-img {
+  width: 4cm;
+  height: 6cm;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#about_us p {
+  flex: 1;
+  margin: 0;
+}
+
+#instruction {
+  padding: 20px;
+  background-color: #eef;
+  border-radius: 8px;
+}
+
+#instruction p {
+  margin-bottom: 1rem;
+}
+
+#contact {
+  padding: 20px;
+  background-color: #eef;
+  border-radius: 8px;
+}
+
+#contact p {
+  margin-bottom: 1rem;
+}

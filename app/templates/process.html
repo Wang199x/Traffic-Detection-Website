@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Process Image</title>
+    <link rel="stylesheet" href="static/css/reset.css" />
+    <link rel="stylesheet" href="static/css/layout.css" />
+    <link rel="stylesheet" href="static/css/process.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <a href="/" class="home-button">Home</a>
+      </div>
+    </header>
+    <main>
+      <!-- Upload container with Choose File button -->
+      <div class="upload-container">
+        <label for="imageUpload" id="chooseFileLabel">Choose File</label>
+        <input
+          type="file"
+          id="imageUpload"
+          accept=".png, .jpeg, .jpg, .gif, .tiff, .bmp"
+          style="display: none"
+        />
+        <span id="fileName">No file chosen</span>
+      </div>
+
+      <!-- Process button to start the processing -->
+      <button id="processButton" class="disabled" disabled>Process</button>
+
+      <!-- Section to show download button after processing -->
+      <div id="downloadSection" style="display: none">
+        <img
+          id="processedImage"
+          src=""
+          alt="Processed Image"
+          style="max-width: 100%; height: auto"
+        />
+        <br />
+        <!-- Display both download buttons on the same line -->
+        <div class="download-buttons">
+          <a id="downloadButton" href="#" download>
+            <button>Download Processed Image</button>
+          </a>
+          <a id="downloadCsvButton" href="#" download>
+            <button>Download Detected Info (CSV)</button>
+          </a>
+        </div>
+      </div>
+    </main>
+    <script src="static/js/process.js"></script>
+  </body>
+</html>

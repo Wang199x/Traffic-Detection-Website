@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Homepage</title>
+    <link rel="stylesheet" href="static/css/reset.css" />
+    <link rel="stylesheet" href="static/css/layout.css" />
+    <link rel="stylesheet" href="static/css/homepage.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <h1>Welcome to Traffic Detection Website!</h1>
+        {% if username %}
+        <div class="welcome-message">
+          Welcome, {{ username[:5] }}{% if username|length > 5 %}...{% endif %}
+        </div>
+        {% endif %}
+      </div>
+    </header>
+    <nav>
+      <ul class="left-menu">
+        <li><a href="#" id="homeLink">Home</a></li>
+        <li><a href="#about_us">About Us</a></li>
+        <li><a href="#instruction">Instruction</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <ul class="right-menu">
+        {% if username %}
+        <li><a href="/logout" id="logoutLink">Logout</a></li>
+        {% else %}
+        <li><a href="/signup" id="signupLink">Sign Up</a></li>
+        <li><a href="/login" id="loginLink">Login</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+    <div id="startSection">
+      <button id="startButton" class="start-button">Start</button>
+    </div>
+    <section id="about_us">
+      <h2>About Us</h2>
+      <div class="content-wrapper">
+        <p>
+          Hi, I am Quang, a Vietnamese student. I completed my Master`s degree
+          in Computer Science and Information Engineering at the end of February
+          2024. During my Master`s course, I completed a paper related to
+          supervised contrastive learning for fault diagnosis in Gas-Insulated
+          Switchgear (paper link:
+          <a href="https://www.mdpi.com/1996-1073/17/1/4"
+            >https://www.mdpi.com/1996-1073/17/1/4</a
+          >). <br />After that, I spent 9 months to continue to support my
+          Professor's works. The main works are analyzing, processing and
+          detecting many electrical fault types from different sources using
+          various machine learning and deep learning methods; writing a simple
+          FastAPI backend for fault detection; and supporting the new student in
+          researching to write the paper. <br />I have had some experience
+          related to data processing (images, tables, ...), data labeling ,
+          model training with MLP, CNN or simple machine learning methods like
+          SVM, KNN, ... In addition, when I was in Vietnam, I had experience
+          working as an internship/fresher in companies so I was familiar with
+          teamwork to complete products. Currently, I am seeking for a job
+          relevant to my major, especially data science and computer vision. I
+          hope I will get the job soon. Thank you very much! <br />Here are my
+          experience in Vietnam: <br />Framgia Inc. (2018.06 - 2018.08): Ruby
+          Internship <br />• Join “ShaRoom Project” <br />- Project purpose: to
+          help students and customers find vacancy rooms, house for rent easily;
+          also help landlords more convenient in finding tenants. <br />-
+          Individual tasks: create database; use i18n to translate from default
+          language to other languages for whole projects; build some features
+          such as sign up, log in, log out, . . . <br />Chainos Solution JSC.
+          (2019.03 - 2019.06) & (2020.03 - 2020.09): AI Internship <br />• Join
+          “CAD Project” <br />- Project purpose: create a software that
+          recognizes and extracts essential objects from technical drawing
+          images. <br />- Individual tasks: label data; cluster data with DBSCAN
+          algorithm, detect line and circle in images using hough transform;
+          text detection using convolutional neural network (CNN). <br />• Join
+          a recruitment web project <br />- Project purpose: build a common
+          website for the purpose of job recruitment by crawling data from many
+          public recruitment websites. <br />- Individual tasks: crawl data with
+          scrapy; divide data into columns and rows; paginate for website;
+          display crawling start time. <br />• Join some VBA projects
+          <br /><strong
+            >This is my demo website for detecting traffic objects using
+            Cityscape dataset. Thank you for visiting my site!</strong
+          >
+        </p>
+        <img
+          src="static/images/QuangCrop.jpg"
+          alt="About Us"
+          class="about-us-img"
+        />
+      </div>
+    </section>
+    <section id="instruction">
+      <h2>Instruction</h2>
+      <p>
+        How to use this website? <br /><strong>Step 1:</strong> Press "Sign Up"
+        and fill all required information. <br />The username length must be
+        between 6 and 15 characters. <br />The password must be between 6 and 15
+        characters, has at least 1 uppercase character, 1 lowercase character
+        and 1 number character. <br />Password confirmation must be same as the
+        entered password. <br />You can press the "eye" icon to show and hide
+        your password. After that, press "Login" and welcome to the traffic
+        detection website. <br />Press "START" to access the process link.
+        <br /><strong>Step 2:</strong> Press "Choose File" button and upload
+        your images (only .png, .jpeg, .jpg, .gif, .tiff, .bmp are accepted)
+        <br />Press "Process" to start detecting traffic objects inside images.
+        <br />
+        Class lists can be detected are: road, sidewalk, building, wall, fence,
+        pole, traffic light, traffic sign, vegetation, terrain, sky, person,
+        rider, car, truck, bus, train, motorcycle, bicycle. <br />
+        After processed images appear, press two options to download to your
+        computer: <br />
+        - Download Process Image: download image with boxes and confident
+        scores. <br />
+        - Download Detected Info (CSV): download detail file, include image
+        size, running time, each object confident score.
+      </p>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>My email: <a href="quangdn1801@gmail.com">quangdn1801@gmail.com</a></p>
+      <p>
+        Lonkedin:
+        <a href="https://www.linkedin.com/in/nhat-quang-dang-5905b22b9/"
+          >https://www.linkedin.com/in/nhat-quang-dang-5905b22b9/</a
+        >
+      </p>
+    </section>
+    <footer class="footer">
+      <p>&copy; 2025 My Homepage. All rights reserved.</p>
+    </footer>
+    <script src="static/js/homepage.js"></script>
+  </body>
+</html>
